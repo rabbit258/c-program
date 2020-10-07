@@ -78,6 +78,7 @@ void dataload(void)
 			temp[index1][index2] = flight[index1][index2];
 	    }
 	}
+	fclose(ftp); 
 }
 int function(void)
 {
@@ -227,6 +228,7 @@ void write(void)
 			fwrite(&flight[index], sizeof(struct i), 12, ftp);
 		else
 			fwrite(&temp[index], sizeof(struct i), 12, ftp);
+	fclose(ftp);
 }
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
